@@ -3,74 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Download</title>
+<title>8 Ball Pool MOD APK - Unlimited Cash & Long Line</title>
 <style>
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:Arial,sans-serif;
-  background:#f3f4f6;
-}
-.card{
-  width:90%;
-  max-width:420px;
-  background:white;
-  padding:30px 22px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 10px 30px #0002;
-}
-h1{margin-bottom:10px}
-p{color:#666;line-height:1.5}
-.btn{
-  display:block;
-  padding:15px;
-  margin-top:18px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.ad{
-  background:#111;
-  color:white;
-}
-.download{
-  background:#16803c;
-  color:white;
-}
+body { background:#0f0f0f; color:white; font-family: 'Segoe UI', Arial; text-align:center; padding:15px; margin:0; }
+.box { background:#1e1e1e; padding:25px; border-radius:20px; max-width:420px; margin:20px auto; border:1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+h2 { color:#00ff88; margin:10px 0; }
+p { color:#aaa; font-size:14px; }
+.btn { display:block; width:100%; padding:16px; margin:12px 0; border:none; border-radius:12px; font-size:16px; font-weight:bold; cursor:pointer; transition:0.3s; }
+#btn1 { background:#00a8ff; color:white; box-shadow: 0 4px 15px rgba(0,168,255,0.4); }
+#btn2, #btn3 { background:#2a2a2a; color:#777; pointer-events:none; border:1px solid #333; }
+.unlocked { background:#00ff88 !important; color:#000 !important; pointer-events:auto !important; box-shadow: 0 4px 15px rgba(0,255,136,0.4); }
+.timer { font-size:13px; color:#ffcc00; margin-top:5px; display:none; font-weight:bold; }
+.step-done { color:#00ff88 !important; }
 </style>
 </head>
-
 <body>
 
-<div class="card">
+<div class="box">
+  <h2>8 BALL POOL MOD APK</h2>
+  <p>Features: Unlimited Cash, Long Line, Anti-Ban</p>
+  <p style="color:#ffcc00;">👇 2 Steps me Unlock Karo 👇</p>
 
-<h1>App Download</h1>
+  <button id="btn1" class="btn" onclick="unlockAd1()">STEP 1: Watch Ad & Unlock 🔓</button>
+  <div id="t1" class="timer">⏳ Ad khula hai, wapas aao 5 second me...</div>
 
-<p>
-Your download is ready. You can view the sponsor page before downloading.
-</p>
+  <button id="btn2" class="btn" onclick="unlockAd2()">STEP 2: Watch Ad & Unlock 🔒</button>
+  <div id="t2" class="timer">⏳ Second ad khula hai, wapas aao 5 second me...</div>
 
-<a
-class="btn ad"
-href="https://www.profitableratecpmnetwork.com/d4gaghrn?key=79d51e14d71c3f6f76f169b7af832de7"
-target="_blank"
-rel="noopener noreferrer">
-download capcut pro
-</a>
-
-<a
-class="btn download"
-href="https://drive.google.com/uc?export=download&id=1RBg5wI1LPw6csIxj8kObquQUBWxQk5HP"
-target="_blank"
-rel="noopener noreferrer">
-Download APK
-</a>
-
+  <button id="btn3" class="btn" onclick="downloadAPK()">FINAL: Download APK 🔒</button>
+  
+  <p style="font-size:11px; margin-top:20px; color:#666;">Team Aryans - ARK Mods</p>
 </div>
 
+<script>
+let adLink1 = "https://www.profitableratecpmnetwork.com/d4gaghrn?key=79d51e14d71c3f6f76f169b7af832de7";
+let adLink2 = "https://www.profitableratecpmnetwork.com/kvtc1svc0?key=86a60effa80f72987c30c6d46d9d429c";
+let apkLink = "https://drive.google.com/uc?export=download&id=1RBg5wI1LPw6csIxj8kObquQUBWxQk5HP";
+
+function unlockAd1(){
+  window.open(adLink1, '_blank');
+  let t1 = document.getElementById('t1');
+  t1.style.display='block';
+  let count = 5;
+  let interval = setInterval(()=>{
+    count--;
+    t1.innerHTML = `⏳ ${count} sec me unlock hoga...`;
+    if(count <= 0){
+      clearInterval(interval);
+      document.getElementById('btn2').classList.add('unlocked');
+      document.getElementById('btn2').innerHTML = "STEP 2: Watch Ad & Unlock ✅ Ready";
+      t1.innerHTML = "✅ Step 1 Complete!";
+      t1.classList.add('step-done');
+    }
+  }, 1000);
+}
+
+function unlockAd2(){
+  window.open(adLink2, '_blank');
+  let t2 = document.getElementById('t2');
+  t2.style.display='block';
+  let count = 5;
+  let interval = setInterval(()=>{
+    count--;
+    t2.innerHTML = `⏳ ${count} sec me APK unlock hoga...`;
+    if(count <= 0){
+      clearInterval(interval);
+      document.getElementById('btn3').classList.add('unlocked');
+      document.getElementById('btn3').innerHTML = "FINAL: Download APK 🎉 UNLOCKED";
+      t2.innerHTML = "✅ All Steps Complete! Ab download karo.";
+      t2.classList.add('step-done');
+    }
+  }, 1000);
+}
+
+function downloadAPK(){
+  window.location.href = apkLink;
+}
+</script>
 </body>
-  </html>
+</html>
